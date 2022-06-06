@@ -111,10 +111,12 @@ public class GameArea extends JPanel implements Runnable {
                 }
             }
 
-            // if a player lose the game
+            // if a player loses the game
             if (gameover) {
                 bird.yPosition = 100;
                 bird.angle = 0;
+                birdUpSpeed = 0;
+                birdDeltaAngle = 0;
                 bird.setBounds(bird.xPosition, bird.yPosition, birdSize, birdSize);
                 for (int i = 0; i < numberOfObstacles; i++) {
                     obstacles.get(i).spawn();
